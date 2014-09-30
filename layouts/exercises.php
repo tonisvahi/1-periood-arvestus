@@ -13,6 +13,17 @@
         <h2>Tingimuslause</h2>
         <!--  Sisesta siia kood -->
 
+          <?php {
+          $random_number = mt_rand(100,200);
+              if ($random_number>"150") {
+                  echo "Juhuslik number ".$random_number." on suurem kui 150.";
+              }
+              if ($random_number<"150") {
+                  echo "Juhuslik number ".$random_number." on väiksem kui 150.";
+              }
+          }
+          ?>
+
         <h2>Juhuslik pilt</h2>
         <!--  Sisesta siia kood -->
 
