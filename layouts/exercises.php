@@ -31,6 +31,15 @@
 
         <h2>Kõikide piltide väljastamine</h2>
         <!--  Sisesta siia kood -->
+
+          <?php
+          $const=1;
+          while ($const <= 12):
+          echo '<img src="http://users.khk.ee/kaspar.naaber/svp/periood-1/arvestus/images/'.$const.'.jpg">';
+          $const++;
+          endwhile;
+          ?>
+
       </section>
     </main>
 
