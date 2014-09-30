@@ -7,6 +7,7 @@
 <body>
   <div id="site-container">
     <?php include "../components/site-header.php"; ?>
+    <?php include "../components/site-data.php"; ?>
 
     <main id="site-body">
       <section id="site-content">
@@ -43,6 +44,17 @@ Snooki teatas uudisest Twitteri vahendusel:</p>
           <div class="post-body">
             <p>«Hotellist lahkudes hakkas ta nutma ja me ei saanud teda maha jätta. See oli viimase hetke otsus,» põhjendas Kim, miks ta lapse üritusele kaasa võttis.</p>
           </div>
+
+            <?php
+            $const = 0;
+            foreach ($blog_news as $news){
+                if(++$const > 2) break;
+                echo '<article><h2 class="post-title">'.$news["post_title"].'</h2>';
+                echo '<div class="post-excerpt">'.$news["post_excerpt"].'</div>';
+                echo '<div class="post-body">'.$news["post_body"].'</div></article>';
+            };
+            ?>
+
         </article>
       </section>
     </main>
